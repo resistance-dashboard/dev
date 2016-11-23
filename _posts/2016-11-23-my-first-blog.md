@@ -1,8 +1,8 @@
 ---
-layout: page
-navigation_title: About
-title: About
-permalink: /about/
+layout: post
+title:  "Fight Back!"
+type: blog
+datetime: 1/1/2016
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel ultricies nibh. Morbi tincidunt mollis pellentesque. Etiam non nisl justo. Proin eu vestibulum dolor. Quisque consectetur iaculis velit sed pharetra. 

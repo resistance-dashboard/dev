@@ -2,13 +2,50 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Resistance Dashboard</title>
-    <description>We are the loyal opposition. Join us.
+    <description>Suggestions for content for this dashboard, send to &lt;a href=&quot;mailto:contact@resistancedashboard.com&quot;&gt;contact@resistancedashboard.com&lt;/a&gt;
 </description>
     <link>http://dashboard.com/</link>
     <atom:link href="http://dashboard.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 22 Nov 2016 12:44:47 -0500</pubDate>
-    <lastBuildDate>Tue, 22 Nov 2016 12:44:47 -0500</lastBuildDate>
+    <pubDate>Wed, 23 Nov 2016 13:15:36 -0500</pubDate>
+    <lastBuildDate>Wed, 23 Nov 2016 13:15:36 -0500</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>Donald Trump Jr. Held Talks on Syria With Russia Supporters</title>
+        <description>
+</description>
+        <pubDate>Wed, 23 Nov 2016 00:00:00 -0500</pubDate>
+        <link>http://dashboard.com/event/trump-russia.html</link>
+        <guid isPermaLink="true">http://dashboard.com/event/trump-russia.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Fight Back!</title>
+        <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel ultricies nibh. Morbi tincidunt mollis pellentesque. Etiam non nisl justo. Proin eu vestibulum dolor. Quisque consectetur iaculis velit sed pharetra.&lt;/p&gt;
+
+&lt;p&gt;Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec et urna massa, eget eleifend ante. Mauris tristique tincidunt sapien vel laoreet. Pellentesque interdum nisl quis purus viverra ut posuere eros malesuada. Nunc dignissim volutpat suscipit. Vivamus mollis tellus ac leo hendrerit in viverra eros interdum. Sed nec purus sit amet tortor luctus tempus. Sed mauris magna, suscipit non vestibulum ut, pharetra et ipsum. Vestibulum ut eros purus, eu adipiscing quam.&lt;/p&gt;
+
+&lt;p&gt;Morbi rhoncus pulvinar aliquam. Nullam ipsum purus, sagittis eget blandit eget, ultrices eu ipsum. Donec eget metus sed felis sollicitudin aliquam sed sed sem. Donec vestibulum risus nisi, eu rhoncus orci. Integer vulputate auctor euismod. Phasellus dignissim mattis orci, at consectetur odio varius vel. Nulla semper vestibulum odio.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 23 Nov 2016 00:00:00 -0500</pubDate>
+        <link>http://dashboard.com/event/my-first-blog.html</link>
+        <guid isPermaLink="true">http://dashboard.com/event/my-first-blog.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Planned Parenthood</title>
+        <description>&lt;p&gt;For the past century, Planned Parenthood has transformed women’s health and empowered millions of people worldwide to make informed health decisions, forever changing the way they live, love, learn and work.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 30 Apr 2016 00:00:00 -0400</pubDate>
+        <link>http://dashboard.com/event/planned-parenthood.html</link>
+        <guid isPermaLink="true">http://dashboard.com/event/planned-parenthood.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>ACLU</title>
@@ -28,17 +65,6 @@
         <pubDate>Fri, 29 Apr 2016 00:00:00 -0400</pubDate>
         <link>http://dashboard.com/event/tim-kaine.html</link>
         <guid isPermaLink="true">http://dashboard.com/event/tim-kaine.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Planned Parenthood</title>
-        <description>&lt;p&gt;For the past century, Planned Parenthood has transformed women’s health and empowered millions of people worldwide to make informed health decisions, forever changing the way they live, love, learn and work.&lt;/p&gt;
-</description>
-        <pubDate>Fri, 29 Apr 2016 00:00:00 -0400</pubDate>
-        <link>http://dashboard.com/event/planned-parenthood.html</link>
-        <guid isPermaLink="true">http://dashboard.com/event/planned-parenthood.html</guid>
         
         
       </item>

@@ -7,8 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Resistance Dashboard</title>
-  <meta name="description" content="We are the loyal opposition. Join us.
-">
+  <meta name="description" content="">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://dashboard.com/">
@@ -61,11 +60,56 @@
 </header>
 
 
-    <script type="text/javascript" src="http://d3js.org/d3.v2.min.js"></script>
+    
+
+    <div class="page-content">
+      <div class="wrapper">
+        <style>
+  .home {
+    width: 40%;
+    float: left;
+  }
+
+  .sidebar {
+    width: 55%;
+    float: right;
+  }
+
+</style>
+
+<div style="text-align: center">
+  <h3>Countdown until 2020 election</h3>
+  <script>
+
+  var today = new Date();
+
+  var BigDay = new Date("November 3, 2020");
+  var msPerDay = 24 * 60 * 60 * 1000;
+  var timeLeft = (BigDay.getTime() - today.getTime());
+  var e_daysLeft = timeLeft / msPerDay;
+  var daysLeft = Math.floor(e_daysLeft);
+  var yearsLeft = 0;
+  if (daysLeft > 365) {
+      yearsLeft = Math.floor(daysLeft / 365);
+      daysLeft = daysLeft % 365;
+  }
+  
+  var e_hrsLeft = (e_daysLeft - daysLeft) * 24;
+  var hrsLeft = Math.floor(e_hrsLeft);
+  var minsLeft = Math.floor((e_hrsLeft - hrsLeft) * 60);
+  // document.write(yearsLeft+" years "+daysLeft + " days " + hrsLeft + " hours" + minsLeft + " minutes");
+  document.write(yearsLeft+" years "+daysLeft + " days ");
+
+</script>
+  <h3></h3>
+</div>
+<div class="clearfix"></div>
+
+<script type="text/javascript" src="https://d3js.org/d3.v2.min.js"></script>
 <style>
   #chart {
     background: #f7f7f7;
-    overflow: auto;
+    overflow: hidden;
   }
 
   .clearfix {
@@ -117,7 +161,7 @@
     <div id="nepotisim-selfenricher"></div>
   </div>
   <div class="guage">
-    <h4>Personal Governing Capacity</h4>
+    <h4>Ignoramus</h4>
     <div id="personal-governing-capacity"></div>
   </div>
 
@@ -301,6 +345,7 @@
       ringWidth: 60,
       maxValue: 10,
       transitionMs: 4000,
+      arcColorFn: d3.interpolateHsl(d3.rgb('#ffbf00'), d3.rgb('#997200'))
     });
     rightwingGauge.render();
     
@@ -313,6 +358,7 @@
       ringWidth: 60,
       maxValue: 10,
       transitionMs: 4000,
+      arcColorFn: d3.interpolateHsl(d3.rgb('#ff8c00'), d3.rgb('#995400'))
     });
     racistGauge.render();
     
@@ -337,6 +383,7 @@
       ringWidth: 60,
       maxValue: 10,
       transitionMs: 4000,
+      arcColorFn: d3.interpolateHsl(d3.rgb('#32cd32'), d3.rgb('#1e7b1e'))
     });
     nepotisimGauge.render();
     
@@ -349,16 +396,17 @@
       ringWidth: 60,
       maxValue: 10,
       transitionMs: 4000,
+      arcColorFn: d3.interpolateHsl(d3.rgb('#fb6076'), d3.rgb('#963946'))
     });
     governingGauge.render();
     
     function updateReadings() {
       // just pump in random data here...
-      rightwingGauge.update(Math.random() * 10);
-      racistGauge.update(Math.random() * 10);
-      threatGauge.update(Math.random() * 10);
-      nepotisimGauge.update(Math.random() * 10);
-      governingGauge.update(Math.random() * 10);
+      rightwingGauge.update(5);
+      racistGauge.update(3);
+      threatGauge.update(2);
+      nepotisimGauge.update(8);
+      governingGauge.update(6);
     }
     
     // every few seconds update reading values
@@ -373,22 +421,47 @@
     onDocumentReady();
   }
 </script>
+<div class="clearfix"></div>
 
-    
-
-    <div class="page-content">
-      <div class="wrapper">
-        <div class="home">
-
-  <h1>How to resist</h1>
+<div class="home">
 
   <h2>Support these organizations</h2>
+
+  <ul>
+  
+
+    
 
   
 
     
 
-      <a href="/event/aclu.html">
+  
+
+    
+
+      <li><a href="/event/planned-parenthood.html">Planned Parenthood</a></li>
+
+
+      <a href="/event/planned-parenthood.html" style="display: none;">
+        
+        <div class="event-sqaure" style="background-image:url(https://s3-media2.fl.yelpcdn.com/buphoto/GPeWtFMREmfRuvNCjBKwyA/o.jpg);">
+        
+          <h2>Planned Parenthood</h2>
+          <div class='event-square-overlay'></div>
+        </div>      
+      </a>
+
+    
+
+  
+
+    
+
+      <li><a href="/event/aclu.html">ACLU</a></li>
+
+
+      <a href="/event/aclu.html" style="display: none;">
         
         <div class="event-sqaure" style="background-image:url(http://aclualabama.org/wp/wp-content/uploads/liberty1-1078x300.jpg);">
         
@@ -404,27 +477,14 @@
     
 
   
-
-    
-
-      <a href="/event/planned-parenthood.html">
-        
-        <div class="event-sqaure" style="background-image:url(https://s3-media2.fl.yelpcdn.com/buphoto/GPeWtFMREmfRuvNCjBKwyA/o.jpg);">
-        
-          <h2>Planned Parenthood</h2>
-          <div class='event-square-overlay'></div>
-        </div>      
-      </a>
-
-    
-
-  
+  </ul>
 
   <div class="clearfix"></div>  
 
   <h1>&nbsp;</h1>
   <h2>Support these politicans</h2>
 
+  <ul>
   
 
     
@@ -433,7 +493,22 @@
 
     
 
-      <a href="/event/tim-kaine.html">
+  
+
+    
+
+  
+
+    
+
+  
+
+    
+
+      <li><a href="/event/tim-kaine.html">Senator Tim Kaine</a></li>
+
+
+      <a href="/event/tim-kaine.html" style="display: none;">
         
         <div class="event-sqaure" style="background-image:url(https://upload.wikimedia.org/wikipedia/commons/1/1d/Tim_Kaine,_official_113th_Congress_photo_portrait.jpg);">
         
@@ -445,15 +520,85 @@
     
 
   
-
-    
-
-  
+  </ul>
 
   <div class="clearfix"></div>
 
 </div>
 
+<div class="sidebar">
+  <h2>Relevant Articles</h2>
+
+  <ul>
+  
+
+    
+
+      <li><a href="http://www.wsj.com/articles/donald-trump-jr-held-talks-on-syria-with-russia-supporters-1479920753" target="_blank">Donald Trump Jr. Held Talks on Syria With Russia Supporters</a></li>
+
+    
+
+  
+
+    
+
+  
+
+    
+
+  
+
+    
+
+  
+
+    
+
+  
+  </ul>
+
+  <h2>Blog</h2>
+
+  <ul>
+  
+
+    
+
+  
+
+    
+
+      <li><small>1/1/2016</small> &nbsp; <a href="/event/my-first-blog.html">Fight Back!</a></li>
+
+
+      <a href="/event/my-first-blog.html" style="display: none;">
+        
+        <div class="event-sqaure" style="background-image:url(http://app-beacon.com/wp-content/uploads/2015/05/events.jpg);">
+        
+          <h2>Fight Back!</h2>
+          <div class='event-square-overlay'></div>
+        </div>      
+      </a>
+
+    
+
+  
+
+    
+
+  
+
+    
+
+  
+
+    
+
+  
+  </ul>
+</div>
+
+<div class="clearfix"></div>
       </div>
     </div>
 
@@ -461,11 +606,41 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">Resistance Dashboard</h2>
-    <p>
-      We are the loyal opposition. Join us.
+    <p style="float: left; width: 40%">
+      Suggestions for content for this dashboard, send to <a href="mailto:contact@resistancedashboard.com">contact@resistancedashboard.com</a>
 
     </p>
+
+    <div style="float: right; width: 40% !important;">
+      <!-- Begin MailChimp Signup Form -->
+      <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+      <style type="text/css">
+        #mc_embed_signup{clear:left; font:14px Helvetica,Arial,sans-serif; }
+        /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+          We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+      </style>
+      <div id="mc_embed_signup">
+      <form action="//timeplots.us14.list-manage.com/subscribe/post?u=a968d8b665760f347bfb4d343&amp;id=cde1a7a7f1" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+          <div id="mc_embed_signup_scroll">
+        
+      <div class="mc-field-group">
+        <label for="mce-EMAIL">Join us</label>
+        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email">
+      </div>
+        <div id="mce-responses" class="clear">
+          <div class="response" id="mce-error-response" style="display:none"></div>
+          <div class="response" id="mce-success-response" style="display:none"></div>
+        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a968d8b665760f347bfb4d343_cde1a7a7f1" tabindex="-1" value=""></div>
+          <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+          </div>
+      </form>
+      </div>
+      <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+      <!--End mc_embed_signup-->
+    </div>
+
+    <div class="clearfix"></div>
 
   </div>
 
