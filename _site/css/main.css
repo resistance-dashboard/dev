@@ -20,7 +20,7 @@ dl, dd, ol, ul, figure {
  */
 body {
   font: 400 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #ff1;
+  color: #111;
   background-color: #fdfdfd;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
@@ -79,7 +79,7 @@ a {
   a:visited {
     color: #1756a9; }
   a:hover {
-    color: #ff1;
+    color: #111;
     text-decoration: underline; }
 
 /**
@@ -173,7 +173,7 @@ footer {
   .site-nav .menu-icon {
     display: none; }
   .site-nav .page-link {
-    color: #ff1;
+    color: #111;
     line-height: 1.5; }
     .site-nav .page-link:not(:last-child) {
       margin-right: 20px; }
