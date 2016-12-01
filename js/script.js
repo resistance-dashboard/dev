@@ -18,7 +18,6 @@ $(function() {
 						if (row && row.length && row[0].length) {
 							if (!gaugeData.model.values[name]) gaugeData.model.values[name] = {};
 							gaugeData.model.values[name].date = new Date(name);
-							console.log(row);
 							$.each(row,function(c,cell) {
 								cell = cell.split(": ");
 								if (cell[0] && cell[1]) {

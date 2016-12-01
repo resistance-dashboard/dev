@@ -22,7 +22,7 @@ markdown: kramdown
 highlighter: rouge
 
 sass:
-    sass_dir: _sass
+    sass_dir: _compass
     
 gems:
   - jekyll-compass
