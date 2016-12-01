@@ -19,7 +19,7 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font: 400 16px/1.5 "Annie Use Your Telescope", cursive, sans-serif;
+  font: 400 18px/1.5 "Annie Use Your Telescope", cursive, sans-serif;
   color: #111;
   background-color: #fdfdfd;
   -webkit-text-size-adjust: 100%;
@@ -38,6 +38,12 @@ ul, ol, dl, figure,
 .highlight {
   margin-bottom: 15px; }
 
+h3 {
+  font-size: 1.5em; }
+
+.section-header {
+  text-align: center; }
+
 /**
  * Images
  */
@@ -52,7 +58,7 @@ figure > img {
   display: block; }
 
 figcaption {
-  font-size: 14px; }
+  font-size: 15.75px; }
 
 /**
  * Lists
@@ -295,7 +301,7 @@ footer {
     margin-bottom: 30px; }
 
 .post-meta {
-  font-size: 14px;
+  font-size: 15.75px;
   color: #828282; }
 
 .post-link {
