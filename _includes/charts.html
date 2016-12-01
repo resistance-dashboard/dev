@@ -1,20 +1,5 @@
 <script type="text/javascript" src="https://d3js.org/d3.v2.min.js"></script>
 <style>
-  #chart {
-    background: #f7f7f7;
-    overflow: hidden;
-  }
-
-  .clearfix {
-    clear: both;
-  }
-
-  .guage {
-    float: left;
-    width: 20%;
-    margin-top: 50px;
-  }
-
   .guage h4 {
     text-align: center;
   }
@@ -35,31 +20,44 @@
   }
 </style>
 
-<section id="chart">
+<div class="row">
 
-  <div class="guage">
-    <h4>Right-wing Ideologue</h4>
-    <div id="rightwing-ideologue"></div>
+  <div class="col-sm-2">
+    <div class="guage">
+      <h4>Right-wing Ideologue</h4>
+      <div id="rightwing-ideologue"></div>
+    </div>
   </div>
-  <div class="guage">
-    <h4>Racist</h4>
-    <div id="racist"></div>
+  
+  <div class="col-sm-2">
+    <div class="guage">
+      <h4>Racist</h4>
+      <div id="racist"></div>
+    </div>
   </div>
-  <div class="guage">
-    <h4>Threat to Democracy</h4>
-    <div id="threat-democracy"></div>
-  </div>
-  <div class="guage">
-    <h4>Nepotism &amp; Self-Enricher</h4>
-    <div id="nepotisim-selfenricher"></div>
-  </div>
-  <div class="guage">
-    <h4>Ignoramus</h4>
-    <div id="personal-governing-capacity"></div>
+  
+  <div class="col-sm-2">
+    <div class="guage">
+      <h4>Threat to Democracy</h4>
+      <div id="threat-democracy"></div>
+    </div>
   </div>
 
-</section>
-<div class="clearfix"></div>
+  <div class="col-sm-2">
+    <div class="guage">
+      <h4>Nepotism &amp; Self-Enricher</h4>
+      <div id="nepotisim-selfenricher"></div>
+    </div>
+  </div>
+
+  <div class="col-sm-2">
+    <div class="guage">
+      <h4>Ignoramus</h4>
+      <div id="personal-governing-capacity"></div>
+    </div>
+  </div>
+
+</div>
 
 <script>
   var gauge = function(container, configuration) {

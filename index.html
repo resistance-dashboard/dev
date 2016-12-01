@@ -17,117 +17,113 @@ published: true
 
 </style>
 
-<div style="text-align: center">
-  <h3>Countdown until 2020 election</h3>
-  {% include countdown.html %}
-  <h3></h3>
-</div>
-<div class="clearfix"></div>
+{% include countdown.html %}
 
 {% include charts.html %}
-<div class="clearfix"></div>
-
-<div class="home">
-
-  <h2>Support these organizations</h2>
-
-  <ul>
-  {% for post in site.posts %}
-
-    {% if post.type contains 'organization' %}
-
-      <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
 
 
-      <a href="{{ post.url | prepend: site.baseurl }}" style="display: none;">
-        {% if post.cover %}
-        <div class="event-sqaure" style="background-image:url({{post.cover}});">
-        {% else %}
-        <div class="event-sqaure" style="background-image:url(http://app-beacon.com/wp-content/uploads/2015/05/events.jpg);">
-        {% endif %}
-          <h2>{{ post.title }}</h2>
-          <div class='event-square-overlay'></div>
-        </div>      
-      </a>
-
-    {% endif %}
-
-  {% endfor %}
-  </ul>
-
-  <div class="clearfix"></div>  
-
-  <h1>&nbsp;</h1>
-  <h2>Support these politicans</h2>
-
-  <ul>
-  {% for post in site.posts %}
-
-    {% if post.type contains 'politican' %}
-
-      <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
 
 
-      <a href="{{ post.url | prepend: site.baseurl }}" style="display: none;">
-        {% if post.cover %}
-        <div class="event-sqaure" style="background-image:url({{post.cover}});">
-        {% else %}
-        <div class="event-sqaure" style="background-image:url(http://app-beacon.com/wp-content/uploads/2015/05/events.jpg);">
-        {% endif %}
-          <h2>{{ post.title }}</h2>
-          <div class='event-square-overlay'></div>
-        </div>      
-      </a>
+<div class="row">
 
-    {% endif %}
+  <div class="col-sm-6">
 
-  {% endfor %}
-  </ul>
+    <h3>Support these organizations</h3>
 
-  <div class="clearfix"></div>
+    <ul>
+    {% for post in site.posts %}
+
+      {% if post.type contains 'organization' %}
+
+        <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+
+
+        <a href="{{ post.url | prepend: site.baseurl }}" style="display: none;">
+          {% if post.cover %}
+          <div class="event-sqaure" style="background-image:url({{post.cover}});">
+          {% else %}
+          <div class="event-sqaure" style="background-image:url(http://app-beacon.com/wp-content/uploads/2015/05/events.jpg);">
+          {% endif %}
+            <h2>{{ post.title }}</h2>
+            <div class='event-square-overlay'></div>
+          </div>      
+        </a>
+
+      {% endif %}
+
+    {% endfor %}
+    </ul>
+
+    <h3>Support these politicans</h3>
+
+    <ul>
+    {% for post in site.posts %}
+
+      {% if post.type contains 'politican' %}
+
+        <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+
+
+        <a href="{{ post.url | prepend: site.baseurl }}" style="display: none;">
+          {% if post.cover %}
+          <div class="event-sqaure" style="background-image:url({{post.cover}});">
+          {% else %}
+          <div class="event-sqaure" style="background-image:url(http://app-beacon.com/wp-content/uploads/2015/05/events.jpg);">
+          {% endif %}
+            <h2>{{ post.title }}</h2>
+            <div class='event-square-overlay'></div>
+          </div>      
+        </a>
+
+      {% endif %}
+
+    {% endfor %}
+    </ul>
+
+    <div class="clearfix"></div>
+
+  </div>
+
+  <div class="col-sm-6">
+    <h3>Relevant Articles</h3>
+
+    <ul>
+    {% for post in site.posts %}
+
+      {% if post.type contains 'articles' %}
+
+        <li><a href="{{ post.link }}" target="_blank">{{ post.title }}</a></li>
+
+      {% endif %}
+
+    {% endfor %}
+    </ul>
+
+    <h3>Blog</h3>
+
+    <ul>
+    {% for post in site.posts %}
+
+      {% if post.type contains 'blog' %}
+
+        <li><small>{{ post.datetime }}</small> &nbsp; <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+
+
+        <a href="{{ post.url | prepend: site.baseurl }}" style="display: none;">
+          {% if post.cover %}
+          <div class="event-sqaure" style="background-image:url({{post.cover}});">
+          {% else %}
+          <div class="event-sqaure" style="background-image:url(http://app-beacon.com/wp-content/uploads/2015/05/events.jpg);">
+          {% endif %}
+            <h2>{{ post.title }}</h2>
+            <div class='event-square-overlay'></div>
+          </div>      
+        </a>
+
+      {% endif %}
+
+    {% endfor %}
+    </ul>
+  </div>
 
 </div>
-
-<div class="sidebar">
-  <h2>Relevant Articles</h2>
-
-  <ul>
-  {% for post in site.posts %}
-
-    {% if post.type contains 'articles' %}
-
-      <li><a href="{{ post.link }}" target="_blank">{{ post.title }}</a></li>
-
-    {% endif %}
-
-  {% endfor %}
-  </ul>
-
-  <h2>Blog</h2>
-
-  <ul>
-  {% for post in site.posts %}
-
-    {% if post.type contains 'blog' %}
-
-      <li><small>{{ post.datetime }}</small> &nbsp; <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
-
-
-      <a href="{{ post.url | prepend: site.baseurl }}" style="display: none;">
-        {% if post.cover %}
-        <div class="event-sqaure" style="background-image:url({{post.cover}});">
-        {% else %}
-        <div class="event-sqaure" style="background-image:url(http://app-beacon.com/wp-content/uploads/2015/05/events.jpg);">
-        {% endif %}
-          <h2>{{ post.title }}</h2>
-          <div class='event-square-overlay'></div>
-        </div>      
-      </a>
-
-    {% endif %}
-
-  {% endfor %}
-  </ul>
-</div>
-
-<div class="clearfix"></div>

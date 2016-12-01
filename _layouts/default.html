@@ -1,23 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
   {% include head.html %}
 
   <body>
 
-    {% include header.html %}
+    <style>
+      .navbar {
+        margin-bottom: 20px;
+      }
 
-    {% if page.cover_credit %}
-      <span class="blog-cover-credit">Credit: Mother</span>
-    {% endif %}
+      footer {
+        background: #353e48;
+        color: #D2D2D2;
+        margin-top: 40px;
+      }
+    </style>
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
+    <div class="container-fluid">
+
+      {% include header.html %}
+
+      {{ content }}
+
+      {% include footer.html %}
+
     </div>
-
-    {% include footer.html %}
 
   </body>
 
