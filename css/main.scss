@@ -1,3 +1,6 @@
+---
+---
+
 @charset "utf-8";
 
 
@@ -10,7 +13,7 @@ $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
-$text-color:       #f11;
+$text-color:       #ff1;
 $background-color: #fdfdfd;
 $brand-color:      #2a7ae2;
 
@@ -24,6 +27,32 @@ $content-width:    95%;
 $on-palm:          600px;
 $on-laptop:        800px;
 
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+/**
+ * Clearfix
+ */
+%clearfix {
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
 
 
 /**
@@ -203,20 +232,6 @@ pre {
 
 
 /**
- * Clearfix
- */
-%clearfix {
-
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-}
-
-
-
-/**
  * Icons
  */
 .icon {
@@ -239,18 +254,7 @@ footer{
     color:#D2D2D2;
 }
 
-// Use media queries like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
-}
+
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "layout",

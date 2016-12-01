@@ -11,8 +11,10 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   
-  <link rel="canonical" href="http://dashboard.com/create/">
-  <link rel="alternate" type="application/rss+xml" title="Resistance Dashboard" href="http://dashboard.com/feed.xml">
+  <link rel="stylesheet" href="css/main.css">
+  
+  <link rel="canonical" href="http://resistancedashboard.com/create/">
+  <link rel="alternate" type="application/rss+xml" title="Resistance Dashboard" href="http://resistancedashboard.com/feed.xml">
 </head>
 
 
@@ -146,77 +148,77 @@
   <div class="post-content">
     <p>Adding an event to your site is easy.</p>
 
-<p>#Getting started
-Create a new .md file or copy an existing post in the  <code class="highlighter-rouge">_posts</code> directory to get started. The post file name must be in this format:</p>
+<h1 id="getting-started">Getting started</h1>
+<p>Create a new .md file or copy an existing post in the  <code>_posts</code> directory to get started. The post file name must be in this format:</p>
 
-<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown">YYYY-MM-DD-title.md
-<span class="gh">#Example 2016-01-01-Back-At-Work-After-New-Year.md</span></code></pre></figure>
+<div class="highlight"><pre><code class="language-markdown" data-lang="markdown">YYYY-MM-DD-title.md
+#Example 2016-01-01-Back-At-Work-After-New-Year.md</code></pre></div>
 
-<p>#Config for posts</p>
+<h1 id="config-for-posts">Config for posts</h1>
 
-<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown"><span class="nn">---</span>
-<span class="c1">#leave this alone</span>
-<span class="s">layout</span><span class="pi">:</span> <span class="s">post</span>
+<div class="highlight"><pre><code class="language-markdown" data-lang="markdown">---
+#leave this alone
+layout: post
 
-<span class="c1">#Whats the title of your event.</span>
-<span class="s">title</span><span class="pi">:</span>  <span class="s2">"</span><span class="s">Talk</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">ES6</span><span class="nv"> </span><span class="s">JavaScript"</span>
+#Whats the title of your event.
+title:  &quot;Talk on ES6 JavaScript&quot;
 
-<span class="c1">#Url to your cover photo for your event. [optional - default will be used if not given]</span>
-<span class="s">cover</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://frontendmasters.com/assets/es6-logo.png"</span>
+#Url to your cover photo for your event. [optional - default will be used if not given]
+cover: &quot;https://frontendmasters.com/assets/es6-logo.png&quot;
 
-<span class="c1">#The date of the event. </span>
-<span class="s">date</span><span class="pi">:</span>   <span class="s">2016-02-01 16:04:19 +0000</span>
+#The date of the event. 
+date:   2016-02-01 16:04:19 +0000
 
-<span class="c1">#Start time of the event</span>
-<span class="s">start_time</span><span class="pi">:</span> <span class="s2">"</span><span class="s">12:00"</span>
+#Start time of the event
+start_time: &quot;12:00&quot;
 
-<span class="c1">#end time of the event</span>
-<span class="s">end_time</span><span class="pi">:</span> <span class="s2">"</span><span class="s">13:00"</span>
+#end time of the event
+end_time: &quot;13:00&quot;
 
-<span class="c1">#event organiser details</span>
+#event organiser details
 
-<span class="c1">#event organiser details</span>
-<span class="s">organiser</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Frank</span><span class="nv"> </span><span class="s">Smith"</span>
+#event organiser details
+organiser: &quot;Frank Smith&quot;
 
-<span class="c1">#Make sure you setup your Organiser details in the _data directory in the organisers.yml file</span>
+#Make sure you setup your Organiser details in the _data directory in the organisers.yml file
 
-<span class="nn">---</span></code></pre></figure>
+---</code></pre></div>
 
-<p>#Post content</p>
+<h1 id="post-content">Post content</h1>
 
 <p>After you have setup your config, all you need to do know is write your content using markdown.</p>
 
-<p>#Example Post</p>
+<h1 id="example-post">Example Post</h1>
 
-<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown"><span class="nn">---</span>
-<span class="s">layout</span><span class="pi">:</span> <span class="s">post</span>
+<div class="highlight"><pre><code class="language-markdown" data-lang="markdown">---
+layout: post
 
-<span class="c1">#event information</span>
-<span class="s">title</span><span class="pi">:</span>  <span class="s2">"</span><span class="s">ReactJS"</span>
-<span class="s">cover</span><span class="pi">:</span> <span class="s2">"</span><span class="s">http://blog.addthiscdn.com/wp-content/uploads/2014/11/addthis-react-flux-javascript-scaling.png"</span>
-<span class="s">date</span><span class="pi">:</span>   <span class="s">2016-03-28</span>
-<span class="s">start_time</span><span class="pi">:</span> <span class="s2">"</span><span class="s">12:00"</span>
-<span class="s">end_time</span><span class="pi">:</span> <span class="s2">"</span><span class="s">13:00"</span>
+#event information
+title:  &quot;ReactJS&quot;
+cover: &quot;http://blog.addthiscdn.com/wp-content/uploads/2014/11/addthis-react-flux-javascript-scaling.png&quot;
+date:   2016-03-28
+start_time: &quot;12:00&quot;
+end_time: &quot;13:00&quot;
 
-<span class="c1">#event organiser details</span>
-<span class="s">organiser_email</span><span class="pi">:</span> <span class="s2">"</span><span class="s">david.boyne@test.com"</span>
-<span class="s">organiser_name</span> <span class="pi">:</span> <span class="s2">"</span><span class="s">David</span><span class="nv"> </span><span class="s">Boyne"</span>
-<span class="s">organiser_photo</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://pbs.twimg.com/profile_images/660943257795457030/igA_joVD.jpg"</span>
+#event organiser details
+organiser_email: &quot;david.boyne@test.com&quot;
+organiser_name : &quot;David Boyne&quot;
+organiser_photo: &quot;https://pbs.twimg.com/profile_images/660943257795457030/igA_joVD.jpg&quot;
 
-<span class="nn">---</span>
+---
 
 I will be doing a small talk on an Introduction into ReactJS. We will cover the following:
-<span class="p">
--</span> What is React?
-<span class="p">-</span> How to get setup with React.
-<span class="p">-</span> How to get building React Apps.
-<span class="p">-</span> Bundle your application
-<span class="p">-</span> Release your application
 
-If this sounds interesting please register your interest below.</code></pre></figure>
+- What is React?
+- How to get setup with React.
+- How to get building React Apps.
+- Bundle your application
+- Release your application
 
-<p>##Thats all folks
-Thats all you need to do. Once the website is built again using <code class="highlighter-rouge">jekyll build</code> or <code class="highlighter-rouge">jekyll serve</code> your new event will be shown.</p>
+If this sounds interesting please register your interest below.</code></pre></div>
+
+<h2 id="thats-all-folks">Thats all folks</h2>
+<p>Thats all you need to do. Once the website is built again using <code>jekyll build</code> or <code>jekyll serve</code> your new event will be shown.</p>
 
   </div>
 
