@@ -270,6 +270,10 @@ pre {
 
 #chart {
   background:#f5f5f5;
+  svg {
+    margin:0 auto;
+    display:block;
+  }
 }
 
 #action {
@@ -277,17 +281,10 @@ pre {
     width:100%;
     height:auto;
   }
-  .col-sm-4 {
-    position:relative;
-    margin-bottom:3em;
-    height:500px;
-  }
   a {
     img {
-      position:absolute;
-      bottom:0;
       width:80%;
-      margin-left:10%;
+      margin:1em 10% 2em;
     }
   }
 }
