@@ -144,6 +144,12 @@ pre {
   .icon > svg path {
     fill: #828282; }
 
+#masthead {
+  display: block;
+  margin: 2em auto 5em;
+  width: 500px;
+  max-width: 94%; }
+
 footer {
   background: #353e48;
   color: #D2D2D2; }
