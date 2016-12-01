@@ -10,11 +10,15 @@
   <meta name="description" content="">
 	<link href="https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  
+  <link rel="stylesheet" href="js/lib/c3/c3.min.css">
   <link rel="stylesheet" href="css/main.css">
   
   <link rel="canonical" href="http://localhost:4000/">
   <link rel="alternate" type="application/rss+xml" title="Resistance Dashboard" href="http://localhost:4000/feed.xml">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="js/lib/d3/d3.min.js" charset="utf-8"></script>
+  <script src="js/lib/c3/c3.min.js"></script>
+  <script src="js/script.js"></script>
 </head>
 
 
@@ -201,7 +205,7 @@
 </section>
 
 
-<script type="text/javascript" src="https://d3js.org/d3.v2.min.js"></script>
+<script type="text/javascript" src="https://d3js.org/d3.v3.min.js"></script>
 <style>
   @media (min-width: 768px) {
     #chart .col-sm-2 {
@@ -237,7 +241,7 @@
 			    <div class="guage">
 			      
 			      <div id="rightwing-ideologue"></div>
-			      <h4>Right-wing Ideologue</h4>
+			      <h4>Ideology</h4>
 			    </div>
 			  </div>
 			  
@@ -245,7 +249,7 @@
 			    <div class="guage">
 			      
 			      <div id="racist"></div>
-			      <h4>Racist</h4>
+			      <h4>Inclusiveness</h4>
 			    </div>
 			  </div>
 			  
@@ -261,9 +265,12 @@
 			    <div class="guage">
 			      
 			      <div id="nepotisim-selfenricher"></div>
-			      <h4>Nepotism &amp; Self-Enricher</h4>
+			      <h4>Self-Interest</h4>
 			    </div>
 			  </div>
+		</div>
+		<div class="row">
+			<div id="timeseries"></div>
 		</div>
 	</div>
 </section>

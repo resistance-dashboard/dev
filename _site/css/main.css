@@ -225,19 +225,32 @@ pre > code {
   margin: 0 auto;
   display: block;
 }
-
+/* line 277, ../../_compass/main.scss */
+#chart #timeseries {
+  height: 400px;
+  width: 100%;
+}
 /* line 280, ../../_compass/main.scss */
+#chart #timeseries .c3-axis-y, #chart #timeseries .c3-legend-item {
+  display: none;
+}
+/* line 285, ../../_compass/main.scss */
+#chart #timeseries .c3-axis-x .tick line {
+  display: none;
+}
+
+/* line 294, ../../_compass/main.scss */
 #action img {
   width: 100%;
   height: auto;
 }
-/* line 285, ../../_compass/main.scss */
+/* line 299, ../../_compass/main.scss */
 #action a img {
   width: 80%;
   margin: 1em 10% 2em;
 }
 
-/* line 292, ../../_compass/main.scss */
+/* line 306, ../../_compass/main.scss */
 .button {
   opacity: .6;
   -moz-transition: opacity 0.25s ease-in-out;
@@ -246,17 +259,17 @@ pre > code {
   transition: opacity 0.25s ease-in-out;
   outline: none;
 }
-/* line 296, ../../_compass/main.scss */
+/* line 310, ../../_compass/main.scss */
 .button:hover {
   opacity: 1;
 }
 
-/* line 302, ../../_compass/main.scss */
+/* line 316, ../../_compass/main.scss */
 #cta img {
   display: block;
   margin: 0 auto;
 }
-/* line 307, ../../_compass/main.scss */
+/* line 321, ../../_compass/main.scss */
 #cta #mc_embed_signup .button {
   background: none;
   display: block;
@@ -266,12 +279,12 @@ pre > code {
   margin: 0 auto;
 }
 
-/* line 320, ../../_compass/main.scss */
+/* line 334, ../../_compass/main.scss */
 #content-main section {
   padding: 2em 0;
 }
 
-/* line 327, ../../_compass/main.scss */
+/* line 341, ../../_compass/main.scss */
 footer {
   background: #353e48;
   color: #D2D2D2;

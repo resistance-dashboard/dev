@@ -274,6 +274,20 @@ pre {
     margin:0 auto;
     display:block;
   }
+  #timeseries {
+    height:400px;
+    width:100%;
+    .c3-axis-y,.c3-legend-item {
+      display:none;
+    }
+    .c3-axis-x {
+      .tick {
+        line {
+          display:none;
+        }
+      }
+    }
+  }
 }
 
 #action {
