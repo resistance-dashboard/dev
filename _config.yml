@@ -21,3 +21,9 @@ url: "http://resistancedashboard.com" # the base hostname & protocol for your si
 markdown: kramdown
 highlighter: none
 
+sass:
+    sass_dir: _sass
+    
+gems:
+  - jekyll-compass
+
