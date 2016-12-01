@@ -1,5 +1,11 @@
 <script type="text/javascript" src="https://d3js.org/d3.v2.min.js"></script>
 <style>
+  @media (min-width: 768px) {
+    #chart .col-sm-2 {
+      width: 19%;
+    }
+  }
+
   .guage h4 {
     text-align: center;
   }
@@ -20,7 +26,7 @@
   }
 </style>
 
-<div class="row">
+<div id="chart" class="row">
 
   <div class="col-sm-2">
     <div class="guage">
