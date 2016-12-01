@@ -150,6 +150,10 @@ pre {
   width: 500px;
   max-width: 94%; }
 
+#manifesto {
+  line-height: 1.5em;
+  font-size: 14px; }
+
 footer {
   background: #353e48;
   color: #D2D2D2; }
