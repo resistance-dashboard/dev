@@ -301,6 +301,13 @@ pre {
   }
   #timeseries {
     height:400px;
+    max-height:400px;
+    overflow:hidden;
+    transition:max-height .33s ease-out;
+    padding:0;
+    &.inactive {
+      max-height:0 !important;
+    }
     .c3-axis-y,.c3-legend-item {
       display:none;
     }
@@ -324,6 +331,23 @@ pre {
     .c3-line {
       stroke-width:3;
       fill:none;
+    }
+  }
+  #timeseries-toggle {
+    border-top:1px solid #333;
+    text-align:center;
+    margin:2em 0 0;
+    i,span {
+      line-height:1em;
+      display:inline-block;
+      background:#f5f5f5;
+      cursor:pointer;
+      position:relative;
+      top:-.5em;
+      padding-right:1em;
+      &:first-child {
+        padding-left:1em;
+      }
     }
   }
 }

@@ -183,7 +183,14 @@ pre {
         right: 0;
         margin-right: 1em; }
   #chart #timeseries {
-    height: 400px; }
+    height: 400px;
+    max-height: 400px;
+    overflow: hidden;
+    -webkit-transition: max-height .33s ease-out;
+    transition: max-height .33s ease-out;
+    padding: 0; }
+    #chart #timeseries.inactive {
+      max-height: 0 !important; }
     #chart #timeseries .c3-axis-y, #chart #timeseries .c3-legend-item {
       display: none; }
     #chart #timeseries .c3-axis-x .tick line {
@@ -195,6 +202,20 @@ pre {
     #chart #timeseries .c3-line {
       stroke-width: 3;
       fill: none; }
+  #chart #timeseries-toggle {
+    border-top: 1px solid #333;
+    text-align: center;
+    margin: 2em 0 0; }
+    #chart #timeseries-toggle i, #chart #timeseries-toggle span {
+      line-height: 1em;
+      display: inline-block;
+      background: #f5f5f5;
+      cursor: pointer;
+      position: relative;
+      top: -.5em;
+      padding-right: 1em; }
+      #chart #timeseries-toggle i:first-child, #chart #timeseries-toggle span:first-child {
+        padding-left: 1em; }
 
 #action img {
   width: 100%;

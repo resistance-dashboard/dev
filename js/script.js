@@ -344,12 +344,21 @@ $listener.on("dataReady",function() {
 	                format: '%m/%d/%y',
 	                values:[output[0][1],output[0][output[0].length-1]]
 	            }
+	        },
+	        y: {
+	        	show: false
 	        }
 	    }
 	})
+	
 	gaugesInit();
+	
+	$("#timeseries").addClass("inactive");
 })
 
 $(function() {
 	gaugeData.model.prep();
+	$("#timeseries-toggle").click(function() {
+		$("#timeseries").toggleClass("inactive");
+	})
 })
