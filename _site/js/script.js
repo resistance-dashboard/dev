@@ -22,7 +22,7 @@ function gaugesInit() {
     	gauges[id] = gauge('#'+id, opts);
     	gauges[id].render();
     	
-    	opts.arcColorFn = d3.interpolateHsl(color[5],color[i]);
+    	/*opts.arcColorFn = d3.interpolateHsl(color[5],color[i]);
     	gauges[id+"-dark"] = gauge('#'+id+"-dark", opts);
     	gauges[id+"-dark"].render();
     	
@@ -35,7 +35,7 @@ function gaugesInit() {
     	
     	opts.arcColorFn = d3.interpolateHsl(mid,color[i]);
     	gauges[id+"-mid"] = gauge('#'+id+"-mid", opts);
-    	gauges[id+"-mid"].render();
+    	gauges[id+"-mid"].render();*/
     })
     
     
