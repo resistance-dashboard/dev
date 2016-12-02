@@ -103,6 +103,7 @@ h4 {
 
 .section-header {
   text-align:center;
+  text-transform:uppercase;
 }
 
 
@@ -228,6 +229,7 @@ pre {
   max-width:1200px;
   margin:0 auto;
   @extend %clearfix;
+  position:relative;
 }
 
 
@@ -261,6 +263,15 @@ pre {
     width: 500px;
     max-width: 94%;
   }
+}
+
+#site-about {
+  top:0;
+  right:0;
+  width:80px;
+  max-width:25%;
+  position:absolute;
+  font-size:0;
 }
 
 //Page body
@@ -399,12 +410,35 @@ pre {
   }
 }
 
+#charts-coming-soon {
+  position:absolute;
+  right:10%;
+  z-index:5;
+  transform:translateY(-80%);
+}
+
 //Page footer
 
 footer{
     background: #353e48;
     color:#D2D2D2;
     padding:1em 0;
+}
+
+@media screen and (max-width:767px) {
+  #site-about {
+    position:static;
+    float:right;
+  }
+  #masthead {
+    h1 {
+      clear:right;
+    }
+  }
+  #charts-coming-soon {
+    position:static;
+    transform:none;
+  }
 }
 
 

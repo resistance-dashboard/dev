@@ -45,7 +45,8 @@ h4 {
   font-size: 1.5em; }
 
 .section-header {
-  text-align: center; }
+  text-align: center;
+  text-transform: uppercase; }
 
 /**
  * Images
@@ -131,7 +132,8 @@ pre {
 .wrapper {
   width: 94%;
   max-width: 1200px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  position: relative; }
 
 /**
  * Icons
@@ -153,6 +155,14 @@ pre {
     margin: 0 auto;
     width: 500px;
     max-width: 94%; }
+
+#site-about {
+  top: 0;
+  right: 0;
+  width: 80px;
+  max-width: 25%;
+  position: absolute;
+  font-size: 0; }
 
 #manifesto {
   line-height: 1.5em;
@@ -247,11 +257,30 @@ pre {
 #content-main section {
   padding: 2em 0; }
 
+#charts-coming-soon {
+  position: absolute;
+  right: 10%;
+  z-index: 5;
+  -webkit-transform: translateY(-80%);
+          transform: translateY(-80%); }
+
 footer {
   background: #353e48;
   color: #D2D2D2;
   padding: 1em 0; }
 
+@media screen and (max-width: 767px) {
+  #site-about {
+    position: static;
+    float: right; }
+
+  #masthead h1 {
+    clear: right; }
+
+  #charts-coming-soon {
+    position: static;
+    -webkit-transform: none;
+            transform: none; } }
 /**
  * Site header
  */
