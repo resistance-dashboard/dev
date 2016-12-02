@@ -207,7 +207,8 @@ pre {
   opacity: .6;
   -webkit-transition: opacity .25s ease-in-out;
   transition: opacity .25s ease-in-out;
-  outline: none; }
+  outline: none;
+  cursor: pointer; }
   .button:hover {
     opacity: 1; }
 

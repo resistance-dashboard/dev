@@ -345,6 +345,7 @@ pre {
   opacity:.6;
   transition: opacity .25s ease-in-out;
   outline:none;
+  cursor:pointer;
   &:hover {
     opacity:1;
   }
