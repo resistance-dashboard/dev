@@ -353,7 +353,9 @@ $listener.on("dataReady",function() {
 	
 	gaugesInit();
 	
-	$("#timeseries").addClass("inactive");
+	setTimeout(function() {
+		$("#timeseries").addClass("inactive");
+	},1000);
 })
 
 $(function() {
