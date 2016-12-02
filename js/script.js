@@ -1,5 +1,8 @@
+var color = ["rgb(38, 142, 193)","rgb(57, 48, 74)","rgb(224, 212, 80)","rgb(255, 125, 86)","rgb(255,255,255)","rgb(0,0,0)"];
+
+
 function gaugesInit() {
-    var rightwingGauge = gauge('#rightwing-ideologue', {
+	var opts = {
       minValue: 0,
       maxValue: 10,
       size: 280,
@@ -7,56 +10,50 @@ function gaugesInit() {
       clipHeight: 180,
       ringWidth: 60,
       maxValue: 10,
-      transitionMs: 4000,
-      arcColorFn: d3.interpolateHsl(d3.rgb('#ffbf00'), d3.rgb('#997200'))
-    });
-    rightwingGauge.render();
+      transitionMs: 4000
+    }
     
-    var racistGauge = gauge('#racist', {
-      minValue: 0,
-      maxValue: 10,
-      size: 280,
-      clipWidth: 280,
-      clipHeight: 180,
-      ringWidth: 60,
-      maxValue: 10,
-      transitionMs: 4000,
-      arcColorFn: d3.interpolateHsl(d3.rgb('#ff8c00'), d3.rgb('#995400'))
-    });
-    racistGauge.render();
+    var gauges = {
+    	ids:["rightwing-ideologue","racist","threat-democracy","nepotisim-selfenricher"]	
+    }
     
-    var threatGauge = gauge('#threat-democracy', {
-      minValue: 0,
-      maxValue: 10,
-      size: 280,
-      clipWidth: 280,
-      clipHeight: 180,
-      ringWidth: 60,
-      maxValue: 10,
-      transitionMs: 4000,
-    });
-    threatGauge.render();
+    $.each(gauges.ids,function(i,id) {
+    	opts.arcColorFn = d3.interpolateHsl(color[4],color[i]);
+    	gauges[id] = gauge('#'+id, opts);
+    	gauges[id].render();
+    	
+    	opts.arcColorFn = d3.interpolateHsl(color[5],color[i]);
+    	gauges[id+"-dark"] = gauge('#'+id+"-dark", opts);
+    	gauges[id+"-dark"].render();
+    	
+    	var mid = color[i].replace("rgb(","").replace(")","").split(",");
+    	$.each(mid,function(t,tone) {
+    		tone = parseInt(tone);
+    		mid[t] = Math.round(tone+((255-tone)/2));
+    	})
+    	mid = "rgb("+mid.join(",")+")";
+    	
+    	opts.arcColorFn = d3.interpolateHsl(mid,color[i]);
+    	gauges[id+"-mid"] = gauge('#'+id+"-mid", opts);
+    	gauges[id+"-mid"].render();
+    })
     
-    var nepotisimGauge = gauge('#nepotisim-selfenricher', {
-      minValue: 0,
-      maxValue: 10,
-      size: 280,
-      clipWidth: 280,
-      clipHeight: 180,
-      ringWidth: 60,
-      maxValue: 10,
-      transitionMs: 4000,
-      arcColorFn: d3.interpolateHsl(d3.rgb('#32cd32'), d3.rgb('#1e7b1e'))
-    });
-    nepotisimGauge.render();
+    
     
     function updateReadings() {
       // just pump in random data here...
       var transform = gaugeData.model.transform;
-      rightwingGauge.update(transform.ideology[transform.ideology.length-1]);
-      racistGauge.update(transform.inclusiveness[transform.inclusiveness.length-1]);
-      threatGauge.update(transform.democracy[transform.democracy.length-1]);
-      nepotisimGauge.update(transform.selfinterest[transform.selfinterest.length-1]);
+      $.each(gauges,function(g,gauge) {
+      	if (g.indexOf("rightwing") !== -1) {
+      		gauge.update(transform.ideology[transform.ideology.length-1]);
+      	} else if (g.indexOf("racist") !== -1) {
+      		gauge.update(transform.inclusiveness[transform.inclusiveness.length-1])
+      	} else if (g.indexOf("threat") !== -1) {
+      		gauge.update(transform.democracy[transform.democracy.length-1])
+      	} else if (g.indexOf("nepotisim") !== -1) {
+      		gauge.update(transform.selfinterest[transform.selfinterest.length-1])
+      	} 
+      })
     }
     
     // every few seconds update reading values
@@ -322,10 +319,10 @@ $listener.on("dataReady",function() {
 	        xFormat: '%Y-%m-%d',
 	        columns: output,
 	        colors: {
-	        	"Ideology":"rgb(255, 191, 0)",
-	        	"Inclusiveness":"rgb(255, 140, 0)",
-	        	"Threat to Democracy":"rgb(206, 0, 0)",
-	        	"Self-Interest":"rgb(50, 205, 50)",
+	        	"Ideology":color[0],
+	        	"Inclusiveness":color[1],
+	        	"Threat to Democracy":color[2],
+	        	"Self-Interest":color[3]
 	        },
 	        types: {
 	        	"Ideology":"spline",
