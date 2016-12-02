@@ -413,8 +413,9 @@ pre {
 #charts-coming-soon {
   position:absolute;
   right:10%;
+  top:0;
   z-index:5;
-  transform:translateY(-80%);
+  transform:translateY(-66.666%);
 }
 
 //Page footer

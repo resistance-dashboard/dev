@@ -352,7 +352,7 @@ $listener.on("dataReady",function() {
 	
 	setTimeout(function() {
 		$("#timeseries").addClass("inactive");
-	},1000);
+	},2000);
 })
 
 $(function() {
