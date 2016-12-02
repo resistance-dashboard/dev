@@ -24,3 +24,27 @@ highlighter: rouge
 sass:
     sass_dir: _sass
 
+gems:
+  - jekyll-autoprefixer
+  
+exclude:
+  - CNAME
+  - .gitignore
+  - bin
+  - config.rb
+  - Gemfile
+  - Gemfile.lock
+  - gems
+  - Procfile
+  - Rakefile
+  - README.md
+  - script
+  - vendor
+  - .ruby-version
+  - Guardfile
+  - .jekyll-assets-cache
+  - .sass-cache
+  - .editorconfig
+  - .idea
+  - .ruby-version
+  - .asset-cache

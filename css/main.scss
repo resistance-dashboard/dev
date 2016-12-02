@@ -40,37 +40,6 @@ $on-laptop:        800px;
     }
 }
 
-@mixin transition($transition...) {
-    -moz-transition:    $transition;
-    -o-transition:      $transition;
-    -webkit-transition: $transition;
-    transition:         $transition;
-}
-@mixin transition-property($property...) {
-    -moz-transition-property:    $property;
-    -o-transition-property:      $property;
-    -webkit-transition-property: $property;
-    transition-property:         $property;
-}
-@mixin transition-duration($duration...) {
-    -moz-transition-property:    $duration;
-    -o-transition-property:      $duration;
-    -webkit-transition-property: $duration;
-    transition-property:         $duration;
-}
-@mixin transition-timing-function($timing...) {
-    -moz-transition-timing-function:    $timing;
-    -o-transition-timing-function:      $timing;
-    -webkit-transition-timing-function: $timing;
-    transition-timing-function:         $timing;
-}
-@mixin transition-delay($delay...) {
-    -moz-transition-delay:    $delay;
-    -o-transition-delay:      $delay;
-    -webkit-transition-delay: $delay;
-    transition-delay:         $delay;
-}
-
 
 /**
  * Clearfix
@@ -307,6 +276,29 @@ pre {
     margin:0 auto;
     display:block;
   }
+  .gauge {
+    position:relative;
+    label {
+      position:absolute;
+      font-size:.9em;
+      text-align:center;
+      &.label-first {
+        top:50%;
+        left:0;
+        margin-left:1em;
+      }
+      &.label-mid {
+        top:0;
+        left:50%;
+        transform:translateX(-50%);
+      }
+      &.label-last {
+        top:50%;
+        right:0;
+        margin-right:1em;
+      }
+    }
+  }
   #timeseries {
     height:400px;
     width:100%;
@@ -338,7 +330,7 @@ pre {
 
 .button {
   opacity:.6;
-  @include transition(opacity .25s ease-in-out);
+  transition: opacity .25s ease-in-out;
   outline:none;
   &:hover {
     opacity:1;

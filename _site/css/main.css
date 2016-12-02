@@ -24,10 +24,10 @@ body {
   background-color: #fdfdfd;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
-  -moz-font-feature-settings: "kern" 1;
   -o-font-feature-settings: "kern" 1;
   font-feature-settings: "kern" 1;
-  font-kerning: normal; }
+  -webkit-font-kerning: normal;
+          font-kerning: normal; }
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -163,6 +163,25 @@ pre {
   #chart svg {
     margin: 0 auto;
     display: block; }
+  #chart .gauge {
+    position: relative; }
+    #chart .gauge label {
+      position: absolute;
+      font-size: .9em;
+      text-align: center; }
+      #chart .gauge label.label-first {
+        top: 50%;
+        left: 0;
+        margin-left: 1em; }
+      #chart .gauge label.label-mid {
+        top: 0;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%); }
+      #chart .gauge label.label-last {
+        top: 50%;
+        right: 0;
+        margin-right: 1em; }
   #chart #timeseries {
     height: 400px;
     width: 100%; }
@@ -180,10 +199,8 @@ pre {
 
 .button {
   opacity: .6;
-  -moz-transition: opacity 0.25s ease-in-out;
-  -o-transition: opacity 0.25s ease-in-out;
-  -webkit-transition: opacity 0.25s ease-in-out;
-  transition: opacity 0.25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+  transition: opacity .25s ease-in-out;
   outline: none; }
   .button:hover {
     opacity: 1; }
@@ -305,30 +322,24 @@ footer {
   padding-left: 15px; }
 
 .footer-col-1 {
-  width: -webkit-calc(35% - (30px / 2));
   width: calc(35% - (30px / 2)); }
 
 .footer-col-2 {
-  width: -webkit-calc(20% - (30px / 2));
   width: calc(20% - (30px / 2)); }
 
 .footer-col-3 {
-  width: -webkit-calc(45% - (30px / 2));
   width: calc(45% - (30px / 2)); }
 
 @media screen and (max-width: 800px) {
   .footer-col-1,
   .footer-col-2 {
-    width: -webkit-calc(50% - (30px / 2));
     width: calc(50% - (30px / 2)); }
 
   .footer-col-3 {
-    width: -webkit-calc(100% - (30px / 2));
     width: calc(100% - (30px / 2)); } }
 @media screen and (max-width: 600px) {
   .footer-col {
     float: none;
-    width: -webkit-calc(100% - (30px / 2));
     width: calc(100% - (30px / 2)); } }
 /**
  * Page content
@@ -503,12 +514,10 @@ footer {
 @media screen and (max-width: 800px) {
   .event-sqaure {
     margin-right: 10px;
-    width: -webkit-calc(50% - (30px / 2));
     width: calc(50% - (30px / 2)); } }
 @media screen and (max-width: 600px) {
   .event-sqaure {
     float: none;
-    width: -webkit-calc(100% - (30px / 2));
     width: calc(100% - (30px / 2)); } }
 .event-time-heading.fix-top {
   margin-top: -10px; }

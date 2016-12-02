@@ -6,7 +6,7 @@
     }
   }
 
-  .guage h4 {
+  .gauge h4 {
     text-align: center;
   }
 
@@ -31,32 +31,36 @@
 		<div class="row">
 			<h3 class="section-header">HOW MUCH SHOULD I WORRY?</h3>
 			  <div class="col-sm-3">
-			    <div class="guage">
-			      
+			    <div class="gauge">
+			      <label class="label-first">Moderate</label>
+			      <label class="label-last">Hard-Right</label>
 			      <div id="rightwing-ideologue"></div>
 			      <h4>Ideology</h4>
 			    </div>
 			  </div>
 			  
 			  <div class="col-sm-3">
-			    <div class="guage">
-			      
+			    <div class="gauge">
+			      <label class="label-first">Unbiased</label>
+			      <label class="label-last">Racist</label>
 			      <div id="racist"></div>
 			      <h4>Inclusiveness</h4>
 			    </div>
 			  </div>
 			  
 			  <div class="col-sm-3">
-			    <div class="guage">
-			      
+			    <div class="gauge">
+			      <label class="label-first">Tolerable</label>
+			      <label class="label-last">Dangerous</label>
 			      <div id="threat-democracy"></div>
 			      <h4>Threat to Democracy</h4>
 			    </div>
 			  </div>
 			
 			  <div class="col-sm-3">
-			    <div class="guage">
-			      
+			    <div class="gauge">
+			      <label class="label-first">Average</label>
+			      <label class="label-last">Appalling</label>
 			      <div id="nepotisim-selfenricher"></div>
 			      <h4>Self-Interest</h4>
 			    </div>
@@ -240,7 +244,7 @@
     var rightwingGauge = gauge('#rightwing-ideologue', {
       minValue: 0,
       maxValue: 10,
-      size: 300,
+      size: 280,
       clipWidth: 280,
       clipHeight: 180,
       ringWidth: 60,
@@ -253,7 +257,7 @@
     var racistGauge = gauge('#racist', {
       minValue: 0,
       maxValue: 10,
-      size: 300,
+      size: 280,
       clipWidth: 280,
       clipHeight: 180,
       ringWidth: 60,
@@ -266,7 +270,7 @@
     var threatGauge = gauge('#threat-democracy', {
       minValue: 0,
       maxValue: 10,
-      size: 300,
+      size: 280,
       clipWidth: 280,
       clipHeight: 180,
       ringWidth: 60,
@@ -278,7 +282,7 @@
     var nepotisimGauge = gauge('#nepotisim-selfenricher', {
       minValue: 0,
       maxValue: 10,
-      size: 300,
+      size: 280,
       clipWidth: 280,
       clipHeight: 180,
       ringWidth: 60,
@@ -291,9 +295,9 @@
     var governingGauge = gauge('#personal-governing-capacity', {
       minValue: 0,
       maxValue: 10,
-      size: 300,
-      clipWidth: 300,
-      clipHeight: 300,
+      size: 280,
+      clipWidth: 280,
+      clipHeight: 180,
       ringWidth: 60,
       maxValue: 10,
       transitionMs: 4000,

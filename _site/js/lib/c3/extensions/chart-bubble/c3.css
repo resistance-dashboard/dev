@@ -10,7 +10,8 @@
 .c3 text {
   -webkit-user-select: none;
   -moz-user-select: none;
-  user-select: none; }
+  -ms-user-select: none;
+      user-select: none; }
 
 .c3-legend-item-tile,
 .c3-xgrid-focus,
@@ -108,8 +109,6 @@
   border-spacing: 0;
   background-color: #fff;
   empty-cells: show;
-  -webkit-box-shadow: 7px 7px 12px -9px #777777;
-  -moz-box-shadow: 7px 7px 12px -9px #777777;
   box-shadow: 7px 7px 12px -9px #777777;
   opacity: 0.9; }
 
