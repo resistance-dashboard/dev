@@ -97,6 +97,12 @@ $(function() {
 		        	"Inclusiveness":"rgb(255, 140, 0)",
 		        	"Threat to Democracy":"rgb(206, 0, 0)",
 		        	"Self-Interest":"rgb(50, 205, 50)",
+		        },
+		        types: {
+		        	"Ideology":"spline",
+		        	"Inclusiveness":"spline",
+		        	"Threat to Democracy":"spline",
+		        	"Self-Interest":"spline"
 		        }
 		    },
 		    point: {
@@ -106,7 +112,8 @@ $(function() {
 		        x: {
 		            type: 'timeseries',
 		            tick: {
-		                format: '%Y-%m-%d'
+		                format: '%m/%d/%y',
+		                values:[output[0][1],output[0][output[0].length-1]]
 		            }
 		        }
 		    }

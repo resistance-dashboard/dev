@@ -301,7 +301,6 @@ pre {
   }
   #timeseries {
     height:400px;
-    width:100%;
     .c3-axis-y,.c3-legend-item {
       display:none;
     }
@@ -310,7 +309,21 @@ pre {
         line {
           display:none;
         }
+        &:first-of-type {
+          text {
+            text-anchor:start !important;
+          }
+        }
+        &:last-of-type {
+          text {
+            text-anchor:end !important;
+          }
+        }
       }
+    }
+    .c3-line {
+      stroke-width:3;
+      fill:none;
     }
   }
 }
