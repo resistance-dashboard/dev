@@ -156,13 +156,21 @@ pre {
     width: 500px;
     max-width: 94%; }
 
-#site-about {
+#masthead-utility {
   top: 0;
   right: 0;
-  width: 80px;
-  max-width: 25%;
-  position: absolute;
-  font-size: 0; }
+  position: absolute; }
+  #masthead-utility a {
+    color: #111; }
+    #masthead-utility a:hover {
+      color: #2a7ae2; }
+
+#site-about {
+  font-size: 0;
+  max-width: 25%; }
+  #site-about img {
+    width: 100%;
+    max-width: 80px; }
 
 #manifesto {
   line-height: 1.5em;
@@ -274,7 +282,7 @@ footer {
   padding: 1em 0; }
 
 @media screen and (max-width: 767px) {
-  #site-about {
+  #masthead-utility {
     position: static;
     float: right; }
 

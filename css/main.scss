@@ -265,13 +265,25 @@ pre {
   }
 }
 
-#site-about {
+#masthead-utility {
   top:0;
   right:0;
-  width:80px;
-  max-width:25%;
   position:absolute;
+  a {
+    color:#111;
+    &:hover {
+      color:$brand-color;
+    }
+  }
+}
+
+#site-about {
   font-size:0;
+  max-width:25%;
+  img {
+    width:100%;
+    max-width:80px;
+  }
 }
 
 //Page body
@@ -431,7 +443,7 @@ footer{
 }
 
 @media screen and (max-width:767px) {
-  #site-about {
+  #masthead-utility {
     position:static;
     float:right;
   }
