@@ -238,6 +238,19 @@ pre {
   margin:0 auto;
   @extend %clearfix;
   position:relative;
+  &.new {
+    &:after {
+      content: "";
+      position: absolute;
+      top: -2em;
+      left: 5%;
+      width: 100px;
+      height: 100px;
+      max-width: 20%;
+      background: url(/media/New_Sticker.png) top left no-repeat;
+      background-size: contain;
+    }
+  }
 }
 
 
@@ -494,6 +507,17 @@ footer{
   #charts-coming-soon {
     position:static;
     transform:none;
+  }
+  .wrapper {
+    &.new {
+      &:after {
+        width:60px;
+        height:60px;
+        top:-3em;
+        left:50%;
+        transform:translateX(-50%);
+      }
+    }
   }
 }
 

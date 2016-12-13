@@ -139,6 +139,16 @@ pre {
   max-width: 1200px;
   margin: 0 auto;
   position: relative; }
+  .wrapper.new:after {
+    content: "";
+    position: absolute;
+    top: -2em;
+    left: 5%;
+    width: 100px;
+    height: 100px;
+    max-width: 20%;
+    background: url(/media/New_Sticker.png) top left no-repeat;
+    background-size: contain; }
 
 /**
  * Icons
@@ -321,7 +331,15 @@ footer {
   #charts-coming-soon {
     position: static;
     -webkit-transform: none;
-            transform: none; } }
+            transform: none; }
+
+  .wrapper.new:after {
+    width: 60px;
+    height: 60px;
+    top: -3em;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); } }
 @media screen and (max-width: 480px) {
   #masthead-utility {
     position: static;
