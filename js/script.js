@@ -266,6 +266,9 @@ angular.module("resistanceApp",[function() {
 				if (output && output.length > 1) {
 					scope.chart = c3.generate({
 						bindto:$(element[0]).find(".timeseries")[0],
+						size: {
+							height:400
+						},
 					    data: {
 					        x: 'x',
 					        xFormat: '%Y-%m-%d',
@@ -309,7 +312,6 @@ angular.module("resistanceApp",[function() {
 			setTimeout(function() {
 				$(element[0]).find(".timeseries").addClass("inactive");
 				$(element[0]).find(".timeseries-toggle").click(function() {
-					console.log($(this).siblings(".timeseries"));
 					$(this).siblings(".timeseries").toggleClass("inactive");
 				})
 			},2000);
