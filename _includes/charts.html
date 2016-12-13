@@ -1,4 +1,3 @@
-<script type="text/javascript" src="https://d3js.org/d3.v3.min.js"></script>
 <style>
   @media (min-width: 768px) {
     #chart .col-sm-2 {
@@ -26,129 +25,11 @@
   }
 </style>
 
-<section id="chart">
-	<div class='wrapper'>
-		<div class="row">
-			<h3 class="section-header">HOW MUCH SHOULD I WORRY?</h3>
-			  <div class="col-sm-3">
-			    <div class="gauge">
-			      <label class="label-first">Moderate</label>
-			      <label class="label-last">Hard-Right</label>
-			      <div id="rightwing-ideologue"></div>
-			      <h4>Ideology</h4>
-			    </div>
-			  </div>
-			  
-			  <div class="col-sm-3">
-			    <div class="gauge">
-			      <label class="label-first">Unbiased</label>
-			      <label class="label-last">Racist</label>
-			      <div id="racist"></div>
-			      <h4>Inclusiveness</h4>
-			    </div>
-			  </div>
-			  
-			  <div class="col-sm-3">
-			    <div class="gauge">
-			      <label class="label-first">Tolerable</label>
-			      <label class="label-last">Dangerous</label>
-			      <div id="threat-democracy"></div>
-			      <h4>Threat to Democracy</h4>
-			    </div>
-			  </div>
-			
-			  <div class="col-sm-3">
-			    <div class="gauge">
-			      <label class="label-first">Average</label>
-			      <label class="label-last">Appalling</label>
-			      <div id="nepotisim-selfenricher"></div>
-			      <h4>Self-Interest</h4>
-			    </div>
-			  </div>
-			  
-		</div>
-		<!--<div class="row">
-			<div class="col-sm-3">
-			    <div class="gauge">
-			      <label class="label-first">Moderate</label>
-			      <label class="label-last">Hard-Right</label>
-			      <div id="rightwing-ideologue-dark"></div>
-			      <h4>Ideology</h4>
-			    </div>
-			  </div>
-			  
-			  <div class="col-sm-3">
-			    <div class="gauge">
-			      <label class="label-first">Unbiased</label>
-			      <label class="label-last">Racist</label>
-			      <div id="racist-dark"></div>
-			      <h4>Inclusiveness</h4>
-			    </div>
-			  </div>
-			  
-			  <div class="col-sm-3">
-			    <div class="gauge">
-			      <label class="label-first">Tolerable</label>
-			      <label class="label-last">Dangerous</label>
-			      <div id="threat-democracy-dark"></div>
-			      <h4>Threat to Democracy</h4>
-			    </div>
-			  </div>
-			
-			  <div class="col-sm-3">
-			    <div class="gauge">
-			      <label class="label-first">Average</label>
-			      <label class="label-last">Appalling</label>
-			      <div id="nepotisim-selfenricher-dark"></div>
-			      <h4>Self-Interest</h4>
-			    </div>
-			  </div>
-		</div>
-		<div class="row">
-			<div class="col-sm-3">
-			    <div class="gauge">
-			      <label class="label-first">Moderate</label>
-			      <label class="label-last">Hard-Right</label>
-			      <div id="rightwing-ideologue-mid"></div>
-			      <h4>Ideology</h4>
-			    </div>
-			  </div>
-			  
-			  <div class="col-sm-3">
-			    <div class="gauge">
-			      <label class="label-first">Unbiased</label>
-			      <label class="label-last">Racist</label>
-			      <div id="racist-mid"></div>
-			      <h4>Inclusiveness</h4>
-			    </div>
-			  </div>
-			  
-			  <div class="col-sm-3">
-			    <div class="gauge">
-			      <label class="label-first">Tolerable</label>
-			      <label class="label-last">Dangerous</label>
-			      <div id="threat-democracy-mid"></div>
-			      <h4>Threat to Democracy</h4>
-			    </div>
-			  </div>
-			
-			  <div class="col-sm-3">
-			    <div class="gauge">
-			      <label class="label-first">Average</label>
-			      <label class="label-last">Appalling</label>
-			      <div id="nepotisim-selfenricher-mid"></div>
-			      <h4>Self-Interest</h4>
-			    </div>
-			  </div>
-		</div>-->
-		<div class="row">
-			<div id="charts-coming-soon" class="col-sm-2">
-				<img src="/media/V-0 Sketches_Coming Soon.png">
-			</div>
-		</div>
-		<div class="row">
-			<div id="timeseries-toggle" class="button"><i class="fa fa-line-chart"></i><span> SEE HOW WE GOT HERE</span></div>
-			<div class="col-sm-6 col-sm-offset-3" id="timeseries"></div>
-		</div>
-	</div>
+<section id="chart" ng-controller="gaugeCtrl">
+	<gauge-panel type="characteristic">
+		<h3 class="section-header">How much should I worry?</h3>
+	</gauge-panel>
+	<gauge-panel type="policy">
+		<h3 class="section-header">What policies/topics are at risk?</h3>
+	</gauge-panel>
 </section>

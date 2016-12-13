@@ -26,7 +26,7 @@
 <meta name="twitter:image:src" content="http://resistancedashboard.com/media/resistance-share.png">
 <meta name="twitter:player" content="">
 <!-- Open Graph General (Facebook & Pinterest) -->
-<meta property="og:url" content="http://resistancedashboard.com/">
+<meta property="og:url" content="http://localhost:4000/">
 <meta property="og:title" content="Resistance Dashboard">
 <meta property="og:description" content=" Is Trump an unpredictable moderate, or a bigot and a wannabe autocrat? We provide daily estimates. Help us resist bad stuff! ">
 <meta property="og:site_name" content="Resistance Dashboard">
@@ -44,8 +44,9 @@
   <link rel="stylesheet" href="/js/lib/c3/c3.min.css">
   <link rel="stylesheet" href="/css/main.css">
   
-  <link rel="canonical" href="http://resistancedashboard.com/">
-  <link rel="alternate" type="application/rss+xml" title="Resistance Dashboard" href="http://resistancedashboard.com/feed.xml">
+  <link rel="canonical" href="http://localhost:4000/">
+  <link rel="alternate" type="application/rss+xml" title="Resistance Dashboard" href="http://localhost:4000/feed.xml">
+  <script src="/js/lib/angular.min.js"></script>
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
   <script src="/js/lib/d3/d3.min.js" charset="utf-8"></script>
   <script src="/js/lib/c3/c3.min.js"></script>
@@ -53,7 +54,7 @@
 </head>
 
 
-  <body>
+  <body ng-app="resistanceApp">
 
     <style>
       .navbar {
@@ -73,15 +74,24 @@
 	<div class='wrapper'>
 		<div id="masthead-utility">
 			<div class="secondary">
-				<a href="https://www.facebook.com/sharer/sharer.php?u=http://resistancedashboard.com/" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/intent/tweet?text=&url=http://resistancedashboard.com/" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="http://www.reddit.com/submit?title=Resistance Dashboard&url=http://resistancedashboard.com/" target="_blank"><i class="fa fa-reddit"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?mini=true&title=Resistance Dashboard&url=http://resistancedashboard.com/" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/intent/tweet?text=&url=http://localhost:4000/" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="http://www.reddit.com/submit?title=Resistance Dashboard&url=http://localhost:4000/" target="_blank"><i class="fa fa-reddit"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?mini=true&title=Resistance Dashboard&url=http://localhost:4000/" target="_blank"><i class="fa fa-linkedin"></i></a>
 			</div>
 			<div class="primary">
-				<a id="site-about" href="/about">
-					<img src="/media/V-0 Sketches_About.png" class="button"> About
-				</a>
+				<i class="fa fa-bars inactive" id="nav-toggle-primary"></i>
+				<nav id="nav-primary" class="inactive">
+					<ul class="nobullet">
+						<li>
+							<a id="site-home" href="/">Home</a>
+						</li>
+						<li>
+							<a id="site-about" href="/about">About</a>
+						</li>
+					</ul>
+				</nav>
+				
 			</div>
 		</div>
 		<h1 id="site-title"><a href="/"><img src="/media/V-0 Sketches_Resistance.png"> Resistance Dashboard</a></h1>
@@ -257,7 +267,6 @@
 </section>
 
 
-<script type="text/javascript" src="https://d3js.org/d3.v3.min.js"></script>
 <style>
   @media (min-width: 768px) {
     #chart .col-sm-2 {
@@ -285,131 +294,13 @@
   }
 </style>
 
-<section id="chart">
-	<div class='wrapper'>
-		<div class="row">
-			<h3 class="section-header">HOW MUCH SHOULD I WORRY?</h3>
-			  <div class="col-sm-3">
-			    <div class="gauge">
-			      <label class="label-first">Moderate</label>
-			      <label class="label-last">Hard-Right</label>
-			      <div id="rightwing-ideologue"></div>
-			      <h4>Ideology</h4>
-			    </div>
-			  </div>
-			  
-			  <div class="col-sm-3">
-			    <div class="gauge">
-			      <label class="label-first">Unbiased</label>
-			      <label class="label-last">Racist</label>
-			      <div id="racist"></div>
-			      <h4>Inclusiveness</h4>
-			    </div>
-			  </div>
-			  
-			  <div class="col-sm-3">
-			    <div class="gauge">
-			      <label class="label-first">Tolerable</label>
-			      <label class="label-last">Dangerous</label>
-			      <div id="threat-democracy"></div>
-			      <h4>Threat to Democracy</h4>
-			    </div>
-			  </div>
-			
-			  <div class="col-sm-3">
-			    <div class="gauge">
-			      <label class="label-first">Average</label>
-			      <label class="label-last">Appalling</label>
-			      <div id="nepotisim-selfenricher"></div>
-			      <h4>Self-Interest</h4>
-			    </div>
-			  </div>
-			  
-		</div>
-		<!--<div class="row">
-			<div class="col-sm-3">
-			    <div class="gauge">
-			      <label class="label-first">Moderate</label>
-			      <label class="label-last">Hard-Right</label>
-			      <div id="rightwing-ideologue-dark"></div>
-			      <h4>Ideology</h4>
-			    </div>
-			  </div>
-			  
-			  <div class="col-sm-3">
-			    <div class="gauge">
-			      <label class="label-first">Unbiased</label>
-			      <label class="label-last">Racist</label>
-			      <div id="racist-dark"></div>
-			      <h4>Inclusiveness</h4>
-			    </div>
-			  </div>
-			  
-			  <div class="col-sm-3">
-			    <div class="gauge">
-			      <label class="label-first">Tolerable</label>
-			      <label class="label-last">Dangerous</label>
-			      <div id="threat-democracy-dark"></div>
-			      <h4>Threat to Democracy</h4>
-			    </div>
-			  </div>
-			
-			  <div class="col-sm-3">
-			    <div class="gauge">
-			      <label class="label-first">Average</label>
-			      <label class="label-last">Appalling</label>
-			      <div id="nepotisim-selfenricher-dark"></div>
-			      <h4>Self-Interest</h4>
-			    </div>
-			  </div>
-		</div>
-		<div class="row">
-			<div class="col-sm-3">
-			    <div class="gauge">
-			      <label class="label-first">Moderate</label>
-			      <label class="label-last">Hard-Right</label>
-			      <div id="rightwing-ideologue-mid"></div>
-			      <h4>Ideology</h4>
-			    </div>
-			  </div>
-			  
-			  <div class="col-sm-3">
-			    <div class="gauge">
-			      <label class="label-first">Unbiased</label>
-			      <label class="label-last">Racist</label>
-			      <div id="racist-mid"></div>
-			      <h4>Inclusiveness</h4>
-			    </div>
-			  </div>
-			  
-			  <div class="col-sm-3">
-			    <div class="gauge">
-			      <label class="label-first">Tolerable</label>
-			      <label class="label-last">Dangerous</label>
-			      <div id="threat-democracy-mid"></div>
-			      <h4>Threat to Democracy</h4>
-			    </div>
-			  </div>
-			
-			  <div class="col-sm-3">
-			    <div class="gauge">
-			      <label class="label-first">Average</label>
-			      <label class="label-last">Appalling</label>
-			      <div id="nepotisim-selfenricher-mid"></div>
-			      <h4>Self-Interest</h4>
-			    </div>
-			  </div>
-		</div>-->
-		<div class="row">
-			<div id="charts-coming-soon" class="col-sm-2">
-				<img src="/media/V-0 Sketches_Coming Soon.png">
-			</div>
-		</div>
-		<div class="row">
-			<div id="timeseries-toggle" class="button"><i class="fa fa-line-chart"></i><span> SEE HOW WE GOT HERE</span></div>
-			<div class="col-sm-6 col-sm-offset-3" id="timeseries"></div>
-		</div>
-	</div>
+<section id="chart" ng-controller="gaugeCtrl">
+	<gauge-panel type="characteristic">
+		<h3 class="section-header">How much should I worry?</h3>
+	</gauge-panel>
+	<gauge-panel type="policy">
+		<h3 class="section-header">What policies/topics are at risk?</h3>
+	</gauge-panel>
 </section>
 
 <section id="action">

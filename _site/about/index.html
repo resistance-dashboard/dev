@@ -26,7 +26,7 @@
 <meta name="twitter:image:src" content="http://resistancedashboard.com/media/resistance-share.png">
 <meta name="twitter:player" content="">
 <!-- Open Graph General (Facebook & Pinterest) -->
-<meta property="og:url" content="http://resistancedashboard.com/about/">
+<meta property="og:url" content="http://localhost:4000/about/">
 <meta property="og:title" content="Resistance Dashboard | About">
 <meta property="og:description" content=" How much should we worry about Trump and Republican majority government? We will suggest strategic and tactical actions to help, including supporting efforts... ">
 <meta property="og:site_name" content="Resistance Dashboard">
@@ -44,8 +44,9 @@
   <link rel="stylesheet" href="/js/lib/c3/c3.min.css">
   <link rel="stylesheet" href="/css/main.css">
   
-  <link rel="canonical" href="http://resistancedashboard.com/about/">
-  <link rel="alternate" type="application/rss+xml" title="Resistance Dashboard" href="http://resistancedashboard.com/feed.xml">
+  <link rel="canonical" href="http://localhost:4000/about/">
+  <link rel="alternate" type="application/rss+xml" title="Resistance Dashboard" href="http://localhost:4000/feed.xml">
+  <script src="/js/lib/angular.min.js"></script>
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
   <script src="/js/lib/d3/d3.min.js" charset="utf-8"></script>
   <script src="/js/lib/c3/c3.min.js"></script>
@@ -53,7 +54,7 @@
 </head>
 
 
-  <body>
+  <body ng-app="resistanceApp">
 
     <style>
       .navbar {
@@ -73,15 +74,24 @@
 	<div class='wrapper'>
 		<div id="masthead-utility">
 			<div class="secondary">
-				<a href="https://www.facebook.com/sharer/sharer.php?u=http://resistancedashboard.com/about/" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/intent/tweet?text=&url=http://resistancedashboard.com/about/" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="http://www.reddit.com/submit?title=Resistance Dashboard%20%7C%20About&url=http://resistancedashboard.com/about/" target="_blank"><i class="fa fa-reddit"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?mini=true&title=Resistance Dashboard%20%7C%20About&url=http://resistancedashboard.com/about/" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/about/" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/intent/tweet?text=&url=http://localhost:4000/about/" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="http://www.reddit.com/submit?title=Resistance Dashboard%20%7C%20About&url=http://localhost:4000/about/" target="_blank"><i class="fa fa-reddit"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?mini=true&title=Resistance Dashboard%20%7C%20About&url=http://localhost:4000/about/" target="_blank"><i class="fa fa-linkedin"></i></a>
 			</div>
 			<div class="primary">
-				<a id="site-about" href="/about">
-					<img src="/media/V-0 Sketches_About.png" class="button"> About
-				</a>
+				<i class="fa fa-bars inactive" id="nav-toggle-primary"></i>
+				<nav id="nav-primary" class="inactive">
+					<ul class="nobullet">
+						<li>
+							<a id="site-home" href="/">Home</a>
+						</li>
+						<li>
+							<a id="site-about" href="/about">About</a>
+						</li>
+					</ul>
+				</nav>
+				
 			</div>
 		</div>
 		<h1 id="site-title"><a href="/"><img src="/media/V-0 Sketches_Resistance.png"> Resistance Dashboard</a></h1>

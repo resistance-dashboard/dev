@@ -8,9 +8,18 @@
 				<a href="http://www.linkedin.com/shareArticle?mini=true&title={{site.title | escape }}{% if page.title %}%20%7C%20{{ page.title | escape }}{% endif %}&url={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url | escape}}" target="_blank"><i class="fa fa-linkedin"></i></a>
 			</div>
 			<div class="primary">
-				<a id="site-about" href="/about">
-					<img src="/media/V-0 Sketches_About.png" class="button"> About
-				</a>
+				<i class="fa fa-bars inactive" id="nav-toggle-primary"></i>
+				<nav id="nav-primary" class="inactive">
+					<ul class="nobullet">
+						<li>
+							<a id="site-home" href="/">Home</a>
+						</li>
+						<li>
+							<a id="site-about" href="/about">About</a>
+						</li>
+					</ul>
+				</nav>
+				
 			</div>
 		</div>
 		<h1 id="site-title"><a href="/"><img src="/media/V-0 Sketches_Resistance.png"> Resistance Dashboard</a></h1>
