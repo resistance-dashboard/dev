@@ -14,8 +14,14 @@ event_label: Events
 description: > # this means to ignore newlines until "baseurl:"
   Suggestions for content for this dashboard, send to <a href="mailto:contact@resistancedashboard.com">contact@resistancedashboard.com</a>
 
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://resistancedashboard.com" # the base hostname & protocol for your site
+
+## Production values
+# baseurl: ""
+# url: "http://resistancedashboard.com"
+
+## Dev values
+baseurl: "/dev"
+url: "http://resistance-dashboard.github.io"
 
 # Build settings
 markdown: kramdown
