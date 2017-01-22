@@ -1,0 +1,20 @@
+---
+layout: page
+navigation_title: Blog
+title: Blog
+permalink: /blog/
+published: true
+description: "How much should we worry about Trump and Republican majority government? We will suggest strategic and tactical actions to help, including supporting efforts, organizations or politicians local or national." 
+---
+
+{% for post in site.posts %}
+    <article class="post">
+      <h1 class="entry-title">{{ post.title }}</h1>
+      <p><em><small>Posted on <time class="published" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date }}</time></small></em></p>
+      <p><img src="{{site.baseurl}}/media/{{post.cover}}"></p>
+      <div class="post-content">
+      	{{post.content}}
+      </div>
+    </article>
+    <hr>
+{% endfor %}

@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "What's in Store"
+cover: "brainstorm.png"
+type: blog
+datetime: 1/22/2017
+---
+
+
+Here are some notes from one of our brainstorming meetings.  We’re thinking about what information will be most useful to users, and looking for datasets and visualizations to feature.
+ 
+What do you want to see on the Resistance Dashboard?  Submit ideas [here](https://docs.google.com/a/graphicacy.com/forms/d/e/1FAIpQLSfsWewwlROipPyvcP_67wPhpPJDhQDFk6qEKDcf2vnkdA1QWw/viewform)!
