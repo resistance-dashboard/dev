@@ -4,6 +4,7 @@ type: blog
 datetime: 1/22/2017
 cover: brainstorm.png
 title: Test New Post
+layout: post
 ---
 ## A New Post
 
