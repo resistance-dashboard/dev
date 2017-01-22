@@ -2,4 +2,5 @@
 .sass-cache/
 .DS_store
 _site/
+CNAME
 
