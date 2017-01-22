@@ -319,7 +319,7 @@ angular.module("resistanceApp",[function() {
 	}
 	return {
 		link:link,
-		templateUrl:"/js/ng-layouts/gaugepanel.html",
+		templateUrl:jekyll.site.baseurl+"/js/ng-layouts/gaugepanel.html",
 		replace:true,
 		transclude:true,
 		restrict:"E",
