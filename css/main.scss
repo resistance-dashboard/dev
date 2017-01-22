@@ -325,6 +325,8 @@ pre {
   max-height:500px;
   transition:max-height .25s ease-in-out;
   overflow:hidden;
+  position:relative;
+  z-index:100;
   &.inactive {
     max-height:0;
   }
