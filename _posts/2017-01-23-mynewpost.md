@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 cover: brainstorm.png
 type: blog
