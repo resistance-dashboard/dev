@@ -3,7 +3,7 @@ published: false
 layout: post
 cover: brainstorm.png
 type: blog
-datetime: 1/22/2017
+datetime: 1/23/2017
 title: Another New Post
 ---
 ## A New Post
