@@ -1,6 +1,6 @@
 ---
 published: false
-title: Test Post
+title: New Title
 layout: post
 type: blog
 datetime: 1/23/2017
