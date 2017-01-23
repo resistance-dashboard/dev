@@ -12,7 +12,6 @@ description: >-
 
 <div class="posts wrapper wrapper-narrower">
 {% assign posts = site.posts | where:'type', 'blog' %}
-{{ posts }}
 {% for post in posts %}
     <article class="post">
       <h1 class="entry-title">{{ post.title }}</h1>
