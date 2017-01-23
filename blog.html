@@ -9,11 +9,6 @@ description: >-
   will suggest strategic and tactical actions to help, including supporting
   efforts, organizations or politicians local or national.
 ---
-
-{% for post in site.posts %}
-{{post.title}}
-{% endfor %}
-
 <div class="posts wrapper wrapper-narrower">
 {% assign posts = site.posts | where:'type', 'blog' %}
 {% for post in posts %}
